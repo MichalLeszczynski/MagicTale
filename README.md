@@ -1,2 +1,2 @@
-# ObjectTalev2
-Game made in python to train object oriented programming
+# MagicTale
+Game made to train object oriented programming in python
