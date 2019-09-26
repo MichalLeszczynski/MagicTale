@@ -26,9 +26,17 @@ class Params:
     def print(self):
         """ TODO Documentation """
 
+        print("")
         for key, param in self.params.items():
             param.print()
         print("")
+
+    def get_param(self, name):
+        return self.params[name]
+
+    def update_param(self, name, value):
+        self.params.setdefault(name, Param(name, 0))
+        self.params[name].current_value += value
 
 
 class Param:
@@ -43,9 +51,12 @@ class Param:
 
     def print(self):
         """ TODO Documentation """
-
+        if self.current_value == self.max_value:
+            text = "{}: {}"
+        else:
+            text = "{}: {}/{}"
         print(
-            "{}: {}/{} ".format(self.name, self.current_value, self.max_value).ljust(
+            text.format(self.name, self.current_value, self.max_value).ljust(
                 JUST_VALUE
             ),
             end="",
@@ -58,6 +69,7 @@ class Param:
 
 
 if __name__ == "__main__":
+
     HP = Param("HP", 100)
     MP = Param("MP", 100)
     ST = Param("ST", 100)
