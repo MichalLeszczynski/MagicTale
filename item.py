@@ -4,6 +4,7 @@ Module implementing Item class.
 from trait import Trait, Traits
 from consts import BASE_PARAMS
 
+
 class Item:
     """
     Class representing item like from games - it has its name, and other parameters.
@@ -39,9 +40,10 @@ class Item:
         self.traits.apply_traits(being)
 
 
-
 if __name__ == "__main__":
-    sharp = Trait("Sharp", {BASE_PARAMS.get_param("ST"): 20, BASE_PARAMS.get_param("ATT"): 5})
+    sharp = Trait(
+        "Sharp", {BASE_PARAMS.get_param("ST"): 20, BASE_PARAMS.get_param("ATT"): 5}
+    )
     magical = Trait("Magical", {BASE_PARAMS.get_param("MP"): 20})
     collection = Traits(sharp, magical)
     i1 = Item(name="spear", traits=collection)

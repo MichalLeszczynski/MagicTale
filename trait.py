@@ -1,6 +1,7 @@
 """ TODO Documentation """
 
 from params import Param, Params
+
 """
  affected_stats : dictionary : {param, value}
 """
@@ -9,7 +10,7 @@ from params import Param, Params
 class Trait:
     """ TODO Documentation """
 
-    def __init__(self, name="", affected_params = None):
+    def __init__(self, name, affected_params={}):
         self.name = name
         self.affected_params = affected_params
         # print("TODO")
@@ -40,4 +41,3 @@ class Traits:
 if __name__ == "__main__":
     # print("TODO")
     A = Trait("Undead", {Param("HP", 50)})
-

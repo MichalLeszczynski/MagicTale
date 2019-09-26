@@ -32,6 +32,20 @@ class Inventory:
         print("\nTotal value: ", self.get_total_value())
         print("Total weight: ", self.get_total_weight())
 
+    def display_precisely_inventory(self):
+        """
+        Displays inventory - all items with its quantity.
+        """
+
+        print("\nInventory:")
+        for item, count in self.inventory.items():
+            multiplier = ""
+            if count > 1:
+                multiplier = "s"
+            print(count, item.name + multiplier)
+        print("\nTotal value: ", self.get_total_value())
+        print("Total weight: ", self.get_total_weight())
+
     def get_total_weight(self):
         """
         Returns total weight of all items in the inventory.

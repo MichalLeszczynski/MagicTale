@@ -12,11 +12,9 @@ class Character(Being):
         super(Character, self).__init__(name)
 
     @staticmethod
-    def create_new_character(name = "", your_class = ""):
+    def create_new_character(name="", your_class="none"):
         if not name:
             name = input("Your name: ")
-        if not your_class:
-            your_class = input("Choose your class (warrior, mage, archer): ".lower())
         return Character(name)
 
 

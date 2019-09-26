@@ -1,7 +1,5 @@
-
 from inventory import Inventory
 from params import Params
-from consts import BASE_PARAMS
 
 
 class Being:
