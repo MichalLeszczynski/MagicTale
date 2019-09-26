@@ -16,16 +16,17 @@ class Param:
 
     def print(self):
         """ TODO Documentation """
-        if self.current_value == self.max_value:
-            text = "{}: {}"
-        else:
-            text = "{}: {}/{}"
-        print(
-            text.format(self.name, self.current_value, self.max_value).ljust(
-                JUST_VALUE
-            ),
-            end="",
-        )
+        if not (self.current_value == self.max_value and self.current_value == 0):
+            if self.current_value == self.max_value:
+                text = "{}: {}"
+            else:
+                text = "{}: {}/{}"
+            print(
+                text.format(self.name, self.current_value, self.max_value).ljust(
+                    JUST_VALUE
+                ),
+                end="",
+            )
 
     def reset(self):
         """ TODO Documentation """
