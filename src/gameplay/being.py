@@ -6,7 +6,6 @@ class Being:
     """ TODO Documentation """
 
     def __init__(self, name):
-        print("Creating new being!")
         self.name = name
         self.name = name
         self.inventory = Inventory()

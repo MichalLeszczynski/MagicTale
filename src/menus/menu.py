@@ -1,4 +1,4 @@
-from src.menu.tile import Tile
+from src.menus.tile import Tile
 
 
 class Menu:
@@ -15,11 +15,7 @@ class Menu:
     def add_tile(self, tile):
         self.tiles[tile.title] = tile
 
-    def invoke(self):
+    def invoke(self, context=None):
         self.print()
         choice = input("\nYour choice: ")
-        self.tiles[choice].on_click()
-
-
-if __name__ == "__main__":
-    pass
+        self.tiles[choice].execute(context)

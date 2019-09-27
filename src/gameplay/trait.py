@@ -37,7 +37,3 @@ class Traits:
         for trait in self.traits:
             trait.apply_params(being)
 
-
-if __name__ == "__main__":
-    # print("TODO")
-    A = Trait("Undead", {Param("HP", 50)})

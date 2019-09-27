@@ -67,26 +67,3 @@ class Params:
     def update_param(self, name: str, value: int):
         self.params.setdefault(name, Param(name, 0))
         self.params[name].current_value += value
-
-
-if __name__ == "__main__":
-
-    HP = Param("HP", 100)
-    MP = Param("MP", 100)
-    ST = Param("ST", 100)
-
-    parameters = Params()
-
-    parameters.add_param(HP)
-    parameters.add_param(MP)
-    parameters.add_param(ST)
-
-    parameters.print()
-
-    parameters.params["HP"].current_value -= 50
-
-    parameters.print()
-
-    parameters.reset_current_params()
-
-    parameters.print()

@@ -82,5 +82,6 @@ class Inventory:
         return new_inventory
 
     def apply_items(self, being):
+
         for item in self.inventory:
             item.apply_traits(being)

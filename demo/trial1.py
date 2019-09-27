@@ -6,10 +6,14 @@ import copy
 from src.consts import ITEMS
 
 if __name__ == "__main__":
-    sharp = Trait("Sharp", {CHARACTER_PARAMS.get_param("ST"): 20, CHARACTER_PARAMS.get_param("ATT"): 5})
+    sharp = Trait(
+        "Sharp",
+        {CHARACTER_PARAMS.get_param("ST"): 20, CHARACTER_PARAMS.get_param("ATT"): 5},
+    )
     magical = Trait("Magical", {CHARACTER_PARAMS.get_param("MP"): 20})
     poisoned = Trait(
-        "Poisoned", {CHARACTER_PARAMS.get_param("ATT"): 5, CHARACTER_PARAMS.get_param("HP"): -30}
+        "Poisoned",
+        {CHARACTER_PARAMS.get_param("ATT"): 5, CHARACTER_PARAMS.get_param("HP"): -30},
     )
     test_traits = Traits(sharp, magical, poisoned)
 

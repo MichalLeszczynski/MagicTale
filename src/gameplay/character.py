@@ -10,5 +10,3 @@ class Character(Being):
     def __init__(self, name):
         print("Creating new character!")
         super(Character, self).__init__(name)
-
-

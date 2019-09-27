@@ -8,5 +8,5 @@ class Tile:
     def get_content(self):
         return self.content
 
-    def execute(self):
-        self.on_click()
+    def execute(self, context=None):
+        self.on_click(context)
