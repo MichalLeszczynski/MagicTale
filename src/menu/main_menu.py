@@ -1,5 +1,6 @@
-from menu import Menu, Tile
-from events import main_events
+from src.menu.menu import Menu
+from src.menu.tile import Tile
+from src.events import main_events
 
 t1 = Tile(
     "New Game",

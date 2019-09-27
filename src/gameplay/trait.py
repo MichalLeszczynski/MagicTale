@@ -1,6 +1,6 @@
 """ TODO Documentation """
 
-from params import Param, Params
+from src.gameplay.params import Param
 
 """
  affected_stats : dictionary : {param, value}

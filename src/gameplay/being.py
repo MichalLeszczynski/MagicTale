@@ -1,5 +1,5 @@
-from inventory import Inventory
-from params import Params
+from src.gameplay.inventory import Inventory
+from src.gameplay.params import Params
 
 
 class Being:
@@ -7,7 +7,7 @@ class Being:
 
     def __init__(self, name):
         print("Creating new being!")
-        self.set_name(name)
+        self.name = name
         self.name = name
         self.inventory = Inventory()
         self.params = Params()
@@ -15,3 +15,7 @@ class Being:
     def set_name(self, name):
         print("New name of character: {}".format(name))
         self.name = name
+
+
+if __name__ == "__main__":
+    test_being = Being("test_rat")

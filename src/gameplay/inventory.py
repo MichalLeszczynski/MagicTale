@@ -3,7 +3,7 @@ Module implementing Inventory class.
 """
 
 from typing import Dict
-from item import Item
+from src.gameplay.item import Item
 
 
 class Inventory:

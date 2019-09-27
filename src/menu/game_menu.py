@@ -1,5 +1,6 @@
-from menu import Menu, Tile
-from events import game_events
+from src.menu.menu import Menu
+from src.menu.tile import Tile
+from src.events import game_events
 
 t1 = Tile("Fight", "Choose to start a fight with a new enemy.", game_events.game_fight)
 t2 = Tile("Inventory", "Choose to view your inventory.", game_events.game_inventory)
