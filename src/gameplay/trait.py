@@ -36,4 +36,3 @@ class Traits:
     def apply_traits(self, being):
         for trait in self.traits:
             trait.apply_params(being)
-

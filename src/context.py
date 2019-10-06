@@ -3,7 +3,6 @@ from src.menus import MAIN_MENU
 
 
 class Context:
-
     def __init__(self):
         self.player = None
 

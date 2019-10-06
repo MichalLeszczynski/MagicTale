@@ -1,3 +1,3 @@
 from src.gameplay.being import Being
 
-Rat = Being("Rat", )
+Rat = Being("Rat")

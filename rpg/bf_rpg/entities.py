@@ -48,9 +48,3 @@ class Character(BaseEntity):
     traits: List[Trait] = field(default_factory=list)
     skills: List[Skill] = field(default_factory=list)
     params: List[Param] = field(default_factory=list)
-
-
-
-
-
-
