@@ -23,7 +23,7 @@ class IEntityRepository(abc.ABC, Generic[EntityType]):
 
 class IParamRepository(IEntityRepository):
     @abc.abstractmethod
-    def create(self, name: str, val: int) -> Param:
+    def create(self, name: str, value: int) -> Param:
         pass
 
 

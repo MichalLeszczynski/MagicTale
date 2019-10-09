@@ -19,6 +19,7 @@ class SkillRepositories(ISkillRepository, EntityRepositories[Skill]):
             Skill(
                 id=skill_id,
                 name=name,
+                description=description,
                 self_effect=self_effect,
                 enemy_effect=enemy_effect,
             )
