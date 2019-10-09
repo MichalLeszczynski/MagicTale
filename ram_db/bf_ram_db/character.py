@@ -12,7 +12,7 @@ class CharacterRepositories(ICharacterRepository, EntityRepositories[Character])
         items: Optional[List[Item]] = None,
         traits: Optional[List[Trait]] = None,
         skills: Optional[List[Skill]] = None,
-        params: Optional[List[Param]] = None
+        params: Optional[List[Param]] = None,
     ) -> Character:
         character_id = self._ram_storage.next_pk()
 
@@ -23,8 +23,8 @@ class CharacterRepositories(ICharacterRepository, EntityRepositories[Character])
                 items=items,
                 traits=traits,
                 skills=skills,
-                params=params
-                )
+                params=params,
+            )
         )
 
         return self._ram_storage.get(character_id)

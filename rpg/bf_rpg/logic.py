@@ -1,7 +1,14 @@
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
 from rpg.bf_rpg.entities import Character, Skill, Param, Trait, Item
-from rpg.bf_rpg.repositories import ITraitRepository, ISkillRepository, IItemRepository, IParamRepository, ICharacterRepository, IEntityRepository
+from rpg.bf_rpg.repositories import (
+    ITraitRepository,
+    ISkillRepository,
+    IItemRepository,
+    IParamRepository,
+    ICharacterRepository,
+    IEntityRepository,
+)
 
 
 @dataclass

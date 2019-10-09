@@ -42,12 +42,12 @@ class ISkillRepository(IEntityRepository):
 class ICharacterRepository(IEntityRepository):
     @abc.abstractmethod
     def create(
-            self,
-            name: str,
-            items: Optional[List[Item]] = None,
-            traits: Optional[List[Trait]] = None,
-            skills: Optional[List[Skill]] = None,
-            params: Optional[List[Param]] = None
+        self,
+        name: str,
+        items: Optional[List[Item]] = None,
+        traits: Optional[List[Trait]] = None,
+        skills: Optional[List[Skill]] = None,
+        params: Optional[List[Param]] = None,
     ) -> Character:
         pass
 
@@ -55,11 +55,7 @@ class ICharacterRepository(IEntityRepository):
 class IItemRepository(IEntityRepository):
     @abc.abstractmethod
     def create(
-            self,
-            name: str,
-            value: int,
-            weight: int,
-            traits: Optional[List[Item]] = None,
+        self, name: str, value: int, weight: int, traits: Optional[List[Item]] = None
     ) -> Item:
         pass
 
@@ -67,9 +63,9 @@ class IItemRepository(IEntityRepository):
 class ITraitRepository(IEntityRepository):
     @abc.abstractmethod
     def create(
-            self,
-            name: str,
-            affected_params: Optional[Dict[Param, int]] = None,
-            gained_skills: Optional[List[Skill]] = None,
+        self,
+        name: str,
+        affected_params: Optional[Dict[Param, int]] = None,
+        gained_skills: Optional[List[Skill]] = None,
     ) -> Trait:
         pass

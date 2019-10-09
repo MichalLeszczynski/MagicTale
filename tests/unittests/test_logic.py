@@ -1,4 +1,10 @@
-from rpg.bf_rpg.logic import CharacterLogic, ItemLogic, ParamLogic, SkillLogic, TraitLogic
+from rpg.bf_rpg.logic import (
+    CharacterLogic,
+    ItemLogic,
+    ParamLogic,
+    SkillLogic,
+    TraitLogic,
+)
 
 from ram_db.bf_ram_db.character import CharacterRepositories
 from ram_db.bf_ram_db.item import ItemRepositories
