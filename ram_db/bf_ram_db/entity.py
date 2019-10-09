@@ -1,6 +1,7 @@
+from typing import List, Optional
+
 from ram_db.bf_ram_db.ram_storage import RamStorage
 from rpg.bf_rpg.repositories import IEntityRepository, EntityType
-from typing import List, Optional
 
 
 class EntityRepositories(IEntityRepository):
@@ -13,15 +14,15 @@ class EntityRepositories(IEntityRepository):
         for skill in static_data:
             self._ram_storage.add(skill)
 
-    def get(self, skill_id: int) -> EntityType:
-        result = self._ram_storage.get(skill_id)
+    def get(self, entity_id: int) -> EntityType:
+        result = self._ram_storage.get(entity_id)
         if result is None:
-            raise Exception("EntityType of id: {} not found".format(skill_id))
+            raise Exception("EntityType of id: {} not found".format(entity_id))
         return result
 
-    def save(self, skill: EntityType) -> EntityType:
-        self._ram_storage.add(skill)
-        return skill
+    def save(self, entity: EntityType) -> EntityType:
+        self._ram_storage.add(entity)
+        return entity
 
     def search(self, name: Optional[str] = None) -> List[EntityType]:
 

@@ -27,7 +27,7 @@ class Skill(BaseEntity):
 class Trait(BaseEntity):
     id: int
     name: str
-    affected_params: List[Param] = field(default_factory=list)
+    affected_params: Dict[Param, int] = field(default_factory=dict)
     gained_skills: List[Skill] = field(default_factory=list)
 
 

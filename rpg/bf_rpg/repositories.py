@@ -9,11 +9,11 @@ EntityType = TypeVar("EntityType")
 
 class IEntityRepository(abc.ABC, Generic[EntityType]):
     @abc.abstractmethod
-    def get(self, skill_id: int) -> EntityType:
+    def get(self, entity_id: int) -> EntityType:
         pass
 
     @abc.abstractmethod
-    def save(self, skill: EntityType) -> EntityType:
+    def save(self, entity: EntityType) -> EntityType:
         pass
 
     @abc.abstractmethod
@@ -21,13 +21,13 @@ class IEntityRepository(abc.ABC, Generic[EntityType]):
         pass
 
 
-class IParamRepository(abc.ABC):
+class IParamRepository(IEntityRepository):
     @abc.abstractmethod
     def create(self, name: str, val: int) -> Param:
         pass
 
 
-class ISkillRepository(abc.ABC):
+class ISkillRepository(IEntityRepository):
     @abc.abstractmethod
     def create(
         self,
@@ -39,19 +39,37 @@ class ISkillRepository(abc.ABC):
         pass
 
 
-class ICharacterRepository(abc.ABC):
+class ICharacterRepository(IEntityRepository):
     @abc.abstractmethod
-    def create(self, name: str) -> Character:
+    def create(
+            self,
+            name: str,
+            items: Optional[List[Item]] = None,
+            traits: Optional[List[Trait]] = None,
+            skills: Optional[List[Skill]] = None,
+            params: Optional[List[Param]] = None
+    ) -> Character:
         pass
 
 
-class IItemRepository(abc.ABC):
+class IItemRepository(IEntityRepository):
     @abc.abstractmethod
-    def create(self, name: str) -> Item:
+    def create(
+            self,
+            name: str,
+            value: int,
+            weight: int,
+            traits: Optional[List[Item]] = None,
+    ) -> Item:
         pass
 
 
-class ITraitRepository(abc.ABC):
+class ITraitRepository(IEntityRepository):
     @abc.abstractmethod
-    def create(self, name: str) -> Trait:
+    def create(
+            self,
+            name: str,
+            affected_params: Optional[Dict[Param, int]] = None,
+            gained_skills: Optional[List[Skill]] = None,
+    ) -> Trait:
         pass
