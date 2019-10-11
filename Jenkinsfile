@@ -6,13 +6,14 @@ pipeline {
 
   }
   stages {
-    stage('Allocate Docker') {
+    stage('Checking formatting') {
       steps {
-        dockerNode(image: 'michalleszczynski/magic-tale:2.0') {
-          sh 'black *'
-          sh 'py.test'
-        }
-
+        sh 'black . --check --include \\.py'
+      }
+    }
+     stage('Running unit tests') {
+      steps {
+        sh 'py.test -v'
       }
     }
   }
