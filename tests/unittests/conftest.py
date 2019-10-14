@@ -8,6 +8,6 @@ STATIC_REPOSITORIES = [
     CharacterRepositories(),
     ItemRepositories(),
     TraitRepositories(),
-    ParamRepositories(),
     SkillRepositories(),
+    ParamRepositories(),
 ]

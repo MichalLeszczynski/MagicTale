@@ -4,6 +4,10 @@ from typing import List, Dict
 PARAM_STARTING_VALUE = 100
 
 
+def default_field(obj):
+    return field(default_factory=lambda: obj)
+
+
 class BaseEntity:
     pass
 
@@ -12,8 +16,8 @@ class BaseEntity:
 class Param(BaseEntity):
     id: int
     name: str
-    max_value: int
-    current_value: int
+    max_value: int = 0
+    current_value: int = 0
 
 
 @dataclass(frozen=True)
@@ -37,12 +41,12 @@ class Trait(BaseEntity):
 class Item(BaseEntity):
     id: int
     name: str
-    value: int
-    weight: int
+    value: int = 0
+    weight: int = 0
     traits: List[Trait] = field(default_factory=list)
 
 
-@dataclass(frozen=True)
+@dataclass
 class Character(BaseEntity):
     id: int
     name: str
