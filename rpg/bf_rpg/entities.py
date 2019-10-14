@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Dict
 
+PARAM_STARTING_VALUE = 100
+
 
 class BaseEntity:
     pass

@@ -13,7 +13,7 @@ from ram_db.bf_ram_db.skill import SkillRepositories
 from ram_db.bf_ram_db.trait import TraitRepositories
 
 
-def test_create_character() -> None:
+def test_create_character_by_character_logic() -> None:
 
     logic = CharacterLogic(CharacterRepositories())
     character = logic.create_new_character("Test Character")
