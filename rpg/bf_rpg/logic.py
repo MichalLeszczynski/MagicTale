@@ -29,13 +29,17 @@ class GameLogic:
         return character
 
     def create_new_item(
-            self, name="NoNameItem", value=0, weight=0, traits: Optional[List[Trait]] = None
+        self, name="NoNameItem", value=0, weight=0, traits: Optional[List[Trait]] = None
     ) -> Item:
         item = self.items.create(name=name, value=value, weight=weight, traits=traits)
         return item
 
-    def create_new_trait(self, name="NoNameTrait", affected_params=None, gained_skills=None) -> Trait:
-        trait = self.traits.create(name=name, affected_params=affected_params, gained_skills=gained_skills)
+    def create_new_trait(
+        self, name="NoNameTrait", affected_params=None, gained_skills=None
+    ) -> Trait:
+        trait = self.traits.create(
+            name=name, affected_params=affected_params, gained_skills=gained_skills
+        )
         return trait
 
     def create_new_skill(self, name="NoNameSkill", description="") -> Skill:
