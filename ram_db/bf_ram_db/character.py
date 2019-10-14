@@ -9,10 +9,10 @@ class CharacterRepositories(ICharacterRepository, EntityRepositories[Character])
     def create(
         self,
         name: str,
-        items: Optional[List[Item]] = None,
-        traits: Optional[List[Trait]] = None,
-        skills: Optional[List[Skill]] = None,
-        params: Optional[List[Param]] = None,
+        items: Optional[List[Item]] = [],
+        traits: Optional[List[Trait]] = [],
+        skills: Optional[List[Skill]] = [],
+        params: Optional[List[Param]] = [],
     ) -> Character:
         character_id = self._ram_storage.next_pk()
 

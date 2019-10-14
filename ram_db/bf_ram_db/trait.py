@@ -9,8 +9,8 @@ class TraitRepositories(ITraitRepository, EntityRepositories[Trait]):
     def create(
         self,
         name: str,
-        affected_params: Optional[Dict[Param, int]] = None,
-        gained_skills: Optional[List[Skill]] = None,
+        affected_params: Optional[Dict[Param, int]] = {},
+        gained_skills: Optional[List[Skill]] = {},
     ) -> Trait:
         trait_id = self._ram_storage.next_pk()
 

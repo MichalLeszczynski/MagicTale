@@ -10,8 +10,8 @@ class SkillRepositories(ISkillRepository, EntityRepositories[Skill]):
         self,
         name: str,
         description: str,
-        self_effect: Optional[Dict[Param, int]] = None,
-        enemy_effect: Optional[Dict[Param, int]] = None,
+        self_effect: Optional[Dict[Param, int]] = {},
+        enemy_effect: Optional[Dict[Param, int]] = {},
     ) -> Skill:
         skill_id = self._ram_storage.next_pk()
 

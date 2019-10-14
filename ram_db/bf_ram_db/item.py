@@ -7,7 +7,7 @@ from ram_db.bf_ram_db.entity import EntityRepositories
 
 class ItemRepositories(IItemRepository, EntityRepositories[Item]):
     def create(
-        self, name: str, value: int, weight: int, traits: Optional[List[Trait]] = None
+        self, name: str, value: int, weight: int, traits: Optional[List[Trait]] = []
     ) -> Item:
         item_id = self._ram_storage.next_pk()
 
