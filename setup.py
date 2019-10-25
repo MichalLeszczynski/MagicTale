@@ -9,5 +9,5 @@ setup(
     author="MichalLeszczynski",
     author_email="mleszczynsk@gmail.com",
     description="Game made in python to train object oriented programming",
-    install_requires=["injector"],
+    install_requires=[],
 )
