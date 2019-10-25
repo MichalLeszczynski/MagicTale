@@ -4,7 +4,7 @@ from ram_db.bf_ram_db.entity import EntityRepositories
 
 
 class ParamRepositories(IParamRepository, EntityRepositories[Param]):
-    def create(self, name: str, max_value: int) -> Param:
+    def create(self, name: str, max_value: int = 0) -> Param:
         param_id = self._ram_storage.next_pk()
 
         self._ram_storage.add(

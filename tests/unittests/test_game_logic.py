@@ -44,12 +44,9 @@ def test_adding_items_to_character_increase_params() -> None:
 
     item = logic.create_new_item("Test Item", traits=[trait1, trait2])
 
-    assert param1.id == 1
-    assert param2.id == 2
-    assert trait1.id == 1
-    assert trait2.id == 2
-    assert item.id == 1
+    assert param2.id == param1.id + 1
+    assert trait2.id == trait1.id + 1
 
-    logic.add_item(character_id=1, item_id=1)
+    logic.add_item(character_id=character.id, item_id=item.id)
 
-    assert logic.characters.get(1).items[0] == item == logic.items.get(1)
+    assert character.items[0] == item == logic.items.get(item.id)
