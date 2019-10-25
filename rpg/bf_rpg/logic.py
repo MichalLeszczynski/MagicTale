@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import List, Optional, Tuple
+from typing import List, Optional
 from rpg.bf_rpg.entities import Character, Skill, Param, Trait, Item
 from rpg.bf_rpg.repositories import (
     ITraitRepository,
